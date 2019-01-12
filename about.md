@@ -1,15 +1,19 @@
 ---
 layout: page
-title: About
+title: 牛岱这个人：
 permalink: /about/
 ---
 
-Some information about you!
+致力于IT类技术文章分享, 有时会写点科幻小说, 欢迎各种工作邀请, 技术交流。
 
-### More Information
+主要技能集中在Web方向, 后端为主，前端也有涉猎，Spring框架深度学习中, Java死忠粉, 同时喜欢用Python
+写点小玩意儿, 几乎不用C++, 时刻关注前沿技术, 对一切新工具, 新技术保持好奇心和学习心,不放过任何一个可以提高工作效率的工具或方法。
 
-A place to include any other types of information that you'd like to include about yourself.
+时刻保持学习心态, 希望能和你们一起学习。
 
-### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+## 联系我
+
+邮箱: [1244453736@qq.com](mailto:1244453736@qq.com)
+
+微信: 18324748963
