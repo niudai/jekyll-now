@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: index
 title: 数据结构 — 链表(LinkedList)
 ---
 要看懂这个教程，你需要：

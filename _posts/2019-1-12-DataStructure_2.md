@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: index
 title: 数据结构 - 栈(Stack)和队列(Queue)
 ---
 上节课我们讲解了LinkedList, 在实际运用中, 我们发现我们需要一些特殊的, 具有某些特点的 LinkedList, 比如:

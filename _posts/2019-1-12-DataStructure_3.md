@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: index
 title: 数据结构 - 并查集(Union Find)
 ---
 

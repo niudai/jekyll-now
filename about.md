@@ -1,6 +1,5 @@
 ---
-layout: page
-title: 牛岱这个人：
+layout: index
 permalink: /about/
 ---
 
