@@ -8,7 +8,7 @@ title: 在用VSCode? 看完这篇文章, 开发效率翻倍!最后一条厉害�
 
 随着2019年的到来，Stack Overflow对2018年的IT生态调查显示：Visual Studio Code超过Visual Studio一跃成为榜首，成为“最受欢迎的开发环境”，没有之一！
 
-![Image](https://pic2.zhimg.com/80/v2-00b7178f44bd493a4e4fec759baa9635_hd.jpg)
+![Image]()
 
 VScode的免费，开源，轻量，快速，强大，智能提示已经让它火遍了全球，今天就来让我们来学习一下VScode的八个提升开发效率的小贴士，让你的开发效率up up up！
 
