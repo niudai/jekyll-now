@@ -1,11 +1,4 @@
 
- /* jQuery Pre loader
-  -----------------------------------------------*/
-$(window).load(function(){
-    $('.preloader').fadeOut(1000); // set duration in brackets    
-});
-
-
 /* Istope Portfolio
 -----------------------------------------------*/
 jQuery(document).ready(function($){
@@ -37,7 +30,7 @@ jQuery(document).ready(function($){
       $container.isotope({ 
         filter: filterValue,
         animationOptions: { 
-            duration: 750, 
+            duration: 0, 
             easing: 'linear', 
             queue: false, 
         }                
@@ -77,14 +70,15 @@ $(document).ready(function() {
             window.addEventListener( 'scroll', function() {
                 if( !didScroll ) {
                     didScroll = true;
-                    setTimeout( scrollPage, 50 );
+                    setTimeout( scrollPage, 0 );
                 }
             }, false );
         }
         
         function scrollPage() {
             var sy = scrollY();
-            if ( sy >= stickynav ) {
+            //if ( sy >= stickynav ) {
+            if (true) {
                 $( '.nav-container' ).addClass('sticky');
             }
             else {

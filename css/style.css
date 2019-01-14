@@ -9,21 +9,15 @@ http://www.tooplate.com/view/2082-pure-mix
 /* Body 
 ------------------------------------- */
 body {
-		background-image: url(../images/background_1.jpg);
+		background: #F6F6F6; 
     font-family: 'Source Sans Pro', sans-serif;
     font-style: normal;
     font-weight: 300;
     position: relative;
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
-html,body {
-  margin-left: 50px;
-  margin-right: 50px;
-  overflow-x: hidden;
+body {
+  overflow: scroll;
 }
 
 html {
@@ -64,7 +58,7 @@ h5 {
 
 p {
   color: #777;
-  font-size: 30px;
+  font-size: 2em;
   line-height: 28px;
   word-spacing: 1px;
   letter-spacing: 1px;
@@ -88,7 +82,6 @@ a:focus {
 }
 
 img {
-  width: 25%;
   display:block;
   margin-left: auto;
   margin-right: auto;
@@ -145,19 +138,22 @@ img {
 /* ========================================== */
 .nav-container,
 nav {
-  overflow: visible;
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
+  position: relative;
+  z-index: 100;
+  min-width: 1032px;
+  overflow: hidden;
+  background: #FFFFFF;
+  box-shadow: 0 5px 5px rgba(26, 26, 26, 0.1);
+  background-clip: content-box;
 }
 
-nav {
+/*nav {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
-}
+}*/
 
 nav a {
   color: #333333;
@@ -181,12 +177,12 @@ nav a {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 1em;
   letter-spacing: 0.3rem;
 }
 .brand a {
   color: #333;
-  font-size: 40px;
+  font-size: 3em;
   font-weight: 700;
   opacity: 1;
   text-decoration: none;
@@ -290,14 +286,15 @@ a.icon {
 }
 
 .circle {
-  width: 45px;
+  font-size: 2em;
+  width: 100px;
   height: 45px;
   text-align: center;
   margin: 0 auto;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -40px;
+  margin-top: 0px;
   margin-left: -40px;
   border-radius: 50%;
   transition: all 0.3s ease;
@@ -345,9 +342,7 @@ a.icon {
 
 .circle.inline {
   position: relative;
-  top: 0;
   left: 0;
-  margin-top: 0;
   margin-left: 0;
   display: inline-block;
   z-index: 0;
@@ -457,16 +452,21 @@ a.icon {
 /* Portfolio section styles
 /* ========================================== */
 #portfolio {
+  margin-top: 3%;
+  background: white;
+  border-style: groove;
+  border-width: 3em;
   text-align: center;
-  padding-top: 3rem;
-  padding-bottom: 6rem;
-}
-
-#portfolio img {
-  width: 100%;
+  align-self: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  box-shadow: 8px -4px 8px rgba(26, 26, 26, 0.1);
 }
 
 #portfolio .portfolio-thumb {
+  box-shadow: 8px 8px 10px 0 rgba(0, 0, 0, 0.2), 0 10px 10px 5px rgba(0, 0, 0, 0.19);
   position: relative;
   overflow: hidden;
   margin: 0;
@@ -482,7 +482,7 @@ a.icon {
   width: 100%;
   height: 100%;
   opacity: 0;
-  -webkit-transition: all 0.4s ease-in-out;
+  /*-webkit-transition: all 0.4s ease-in-out;*/
   transition: all 0.4s ease-in-out;
 }
 
@@ -518,6 +518,7 @@ a.icon {
 
 .filter-wrapper li {
     display: inline-block;
+    overflow: hidden;
     margin: 4px;
 }
 

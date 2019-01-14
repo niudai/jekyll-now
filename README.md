@@ -24,7 +24,7 @@ Fork this repo, then rename the repository to yourgithubusername.github.io.
 
 Your Jekyll blog will often be viewable immediately at <https://yourgithubusername.github.io> (if it's not, you can often force it to build by completing step 2)
 
-![Step 1](/images/step1.gif "Step 1")
+![Image](/images/step1.gif "Step 1")
 
 ### Step 2) Customize and view your site
 

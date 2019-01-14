@@ -2,7 +2,6 @@
 layout: index
 title: 酸球发电机
 ---
-# 酸球发电机
 
 ## 一
 
