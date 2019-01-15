@@ -1,6 +1,7 @@
 ---
-layout: index
+layout: page
 title: 数据结构 — 链表(LinkedList)
+categories: [data]
 ---
 要看懂这个教程，你需要：
 1. 一个智商基本在线的脑子。
@@ -49,7 +50,7 @@ title: 数据结构 — 链表(LinkedList)
 
 我们现在所说的List并不是一个函数，也不是一个变量，它只是数据结构的一个概念。翻译成中文，大概就是“序列”的意思，说白了，它就是这个东西：
 
-![Image](https://pic3.zhimg.com/80/v2-e152aa84847cc4061b5545afa19c146a_hd.jpg)
+![Image](../images/datastructure-linkedlist/1.jpg)
 
 一个用来储存变量的序列，就像图书馆中的一个书架，比方说一本中等厚度的书（变量）厚度为1cm, 那么100cm长度的书架就能放100本书，道理十分简单，List就是储存多个变量的一个序列。
 
@@ -86,7 +87,7 @@ int x[3]；
 你说：“OK！”
 
 这时，图书馆内某个位置就会储存上你的“x”，就像下方：
-![Image](https://pic3.zhimg.com/80/v2-af5ac8d980e7ae871ec915d3e5816466_hd.jpg)
+![Image](../images/datastructure-linkedlist/2.jpg)
 
 看到你的"x"了吗？看到我为什么在其他位置标上"?"了吗？
 
@@ -103,7 +104,7 @@ int x[3]；
 “你不早说？你旁边的位置刚刚被人预定了。”
 
 也就是像这样：
-![Image](https://pic3.zhimg.com/80/v2-a95e0f7cebeb3b386cf4779e821071b6_hd.jpg)
+![Image](../images/datastructure-linkedlist/3.jpg)
 
 相邻的位置已经被占用了，你无法在原地把它扩充成长度为五的数组了！
 
@@ -133,7 +134,7 @@ int x[3]；
 
 如图：
 
-![Image](https://pic2.zhimg.com/80/v2-2e80d3c5b57f55defaeaae9a42edd681_hd.jpg)
+![Image](../images/datastructure-linkedlist/4.jpg)
 
 第一个元素就是head，然后最后一个元素储存的地址由于不指向任何东西，所以给它置为NULL。
 
@@ -151,15 +152,15 @@ int x[3]；
 
 1. 我们需要一个数据类型（node), node需要能够储存一个int的"data"，和指向下一个node的“next”，于是我们有：
 
-![Image](https://pic2.zhimg.com/80/v2-f941c7f00ce7bf26da7b70d75046114d_hd.jpg)
+![Image](../images/datastructure-linkedlist/5.jpg)
 
 将next初始化为null, 但实际用的时候会让它指向具体的node。
 
-2. 我们需要数据类型：LinkedList, 它能够储存一系列node。
+1. 我们需要数据类型：LinkedList, 它能够储存一系列node。
 
 首先，我们给LinkedList赋予一个add方法，它用来增加新元素。
 
-![Image](https://pic1.zhimg.com/80/v2-85b39969e942b3b432a1b3e29421d15c_hd.jpg)
+![Image](../images/datastructure-linkedlist/6.jpg)
 
 首先赋予两个变量：head和temp。head用来储存我们的表头，temp则指代temporal，是临时调用的参数，它用来传递，交换变量，相当于一个桥梁。
 
@@ -169,29 +170,29 @@ int x[3]；
 
 下一个方法：插入功能：
 
-![Image](https://pic4.zhimg.com/80/v2-e1efaaefea26008db0a723ed5b9d6917_hd.jpg)
+![Image](../images/datastructure-linkedlist/7.jpg)
 
 26行给一个For循环，循环index-1次，让temp不断地变成下一个元素，循环结束后temp是第index个元素，然后让新插入的元素的"next"指向temp的下一个元素，然后让temp指向"next",插入完成。
 
 下一个方法：删除第一个元素：
 
-![Image](https://pic3.zhimg.com/80/v2-e22694ce4ea1151903ce51c02d5121e6_hd.jpg)
+![Image](../images/datastructure-linkedlist/8.jpg)
 
 很好理解，只需让表头变成第二个元素即可，如果删除后list为空，则让first置true。
 
 接下来，做一个打印所有元素的方法：printAll();
 
-![Image](https://pic1.zhimg.com/80/v2-3ecccf53332959523fa8e4a5f1857cac_hd.jpg)
+![Image](../images/datastructure-linkedlist/9.jpg)
 
 好，最后做一个Runner类，装一个Main方法进去，作为我们程序的入口，检测一下程序：
 
-![Image](https://pic3.zhimg.com/80/v2-4e58516ec9148e7ea9558366cac3f992_hd.jpg)
+![Image](../images/datastructure-linkedlist/10.jpg)
 
 我们先加了9，4，7，又在最后加了4，打印出来应该是：7494，删除表头后，应该是：494。
 
 验证：
 
-![Image](https://pic2.zhimg.com/80/v2-a563788229f0f52895bfaec307642615_hd.jpg)
+![Image](../images/datastructure-linkedlist/11.jpg)
 
 符合预期。
 

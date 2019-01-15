@@ -1,6 +1,7 @@
 ---
-layout: index
+layout: page
 title: 数据结构 - 并查集(Union Find)
+categories: [data]
 ---
 
 仔细想想，在日常生活中，你见过这样的情景吗？

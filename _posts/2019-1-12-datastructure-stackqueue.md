@@ -1,6 +1,7 @@
 ---
-layout: index
+layout: page
 title: 数据结构 - 栈(Stack)和队列(Queue)
+categories: [data]
 ---
 上节课我们讲解了LinkedList, 在实际运用中, 我们发现我们需要一些特殊的, 具有某些特点的 LinkedList, 比如:
 
@@ -12,7 +13,7 @@ title: 数据结构 - 栈(Stack)和队列(Queue)
 
 看这样一张图：
 
-![Image](https://pic2.zhimg.com/80/v2-0953f3a5276545fc3f9e0ddbf37d9a69_hd.jpg)
+![Image](../images/datastructure-stackqueue/1.jpg)
 
 这便是一个堆，你永远都只能拿下来你最后放上去的那本书，而且理论上，为了保护数据，我们不允许用户更改甚至查看除了最后放上去的书之外的任何一本，所以我们也没必要给每本书编号，这就是：
 
@@ -27,7 +28,7 @@ title: 数据结构 - 栈(Stack)和队列(Queue)
 
 # Queue（队列）
 
-![Image](https://pic3.zhimg.com/80/v2-33d10afef38886a9987b865c8e56dd52_hd.jpg)
+![Image](../images/datastructure-stackqueue/2.jpg)
 
 在这种数据结构中，为了保护数据的内在逻辑，你只能：
 
@@ -46,7 +47,7 @@ title: 数据结构 - 栈(Stack)和队列(Queue)
 4. 查看所有元素（当然，只是查看，不能更改）。
 好，开始：
 
-![Image](https://pic1.zhimg.com/80/v2-5202c64c4842167bf02274c3657e4998_hd.jpg)
+![Image](../images/datastructure-stackqueue/3.jpg)
 
 我们希望Stack是可以适用多种数据类型的，比如存储字符串，整数之类的，于是我们在类名称后面加了<K>，这是java里面的基础知识，凡是在类名称后加上<X>(x指代任何数据类型)，我们就成为Generic Class。它是专为这种情况设计的，所谓K只是一个形式参数，到时候如果我们想创建了个存储String 类型的Stack 那就这样声明：
 
@@ -56,9 +57,11 @@ Stack<String> stack = new Stack<String>();
 
 我们继承了一个Interface: Iterable, 继承了这个Interface的类就可以像在Python里面那样，使用For-each语句，就像这样：
 
-`for(int x: stack){`
-`...`
-`}`
+```
+for(int x: stack){
+...
+}
+```
 
 然后程序就会自动遍历stack内部的所有元素，用不着你亲自去写计数器等东西！
 
@@ -66,12 +69,11 @@ Stack<String> stack = new Stack<String>();
 
 Push() ：
 
-![Image](https://pic4.zhimg.com/80/v2-0c97af0eeb43dd44d1d52534b1a5c44f_hd.jpg)
+![Image](../images/datastructure-stackqueue/4.jpg)
 
 如果你理解了上节课的东西，那这个很好理解，不解释。
 
-Pop():
-![Image](https://pic1.zhimg.com/80/v2-c019f3666ef3fd2ab5785019ed9b5960_hd.jpg)
+![Image](../images/datastructure-stackqueue/5.jpg)
 
 说白了就是删去表头，表头是LinkedList里面最容易删除的元素。
 
@@ -85,21 +87,21 @@ Pop():
 
 Peek()：
 
-![Image](https://pic3.zhimg.com/80/v2-82aeccd181b0ced5a5e9b55c1d19b406_hd.jpg)
+![Image](../images/datastructure-stackqueue/6.jpg)
 
 查看最近添加的元素，用Peek() 方法。
 
 为了检验我们的Stack 是否按照我们想要的方式储存数据，我们可以添加一个PrintAll（）方法，将所有元素打印出来，当确认无问题后，可以把这个方法删掉，因为它不是必需的。
 
-![Image](https://pic2.zhimg.com/80/v2-b5c166580ca2c420a23944f5e9127791_hd.jpg)
+![Image](../images/datastructure-stackqueue/7.jpg)
 
 因为我们implement了一个Iterable，所以我们必须添加这个方法：
 
-![Image](https://pic4.zhimg.com/80/v2-9368fc2b351d443684ca983426fa81c7_hd.jpg)
+![Image](../images/datastructure-stackqueue/8.jpg)
 
 接下来我们要做一个ListIterator(非必听内容):
 
-![Image](https://pic3.zhimg.com/80/v2-85cef0cdd5b3292cf2a573b0b76d40f6_hd.jpg)
+![Image](../images/datastructure-stackqueue/9.jpg)
 
 它继承了Iterator, 然后我们让它的next方法里做一个传递功能，从当前的元素传递到下一个元素，再让hasNext（）方法检验当前元素是否为空，这个类有一个Construtor, 赋予了current的值，我们给它赋予表头，接下来我们的Stack 就可以使用For-each 语句了。
 
@@ -107,7 +109,7 @@ Peek()：
 
 好，在我们的main 方法里执行一些语句，看看是否符合预期：
 
-![Image](https://pic4.zhimg.com/80/v2-202d88cbd575cbc8e62be46a774615cf_hd.jpg)
+![Image](../images/datastructure-stackqueue/10.jpg)
 
 我们将堆赋予了String类型，那么list 就变成了一个储存String 的堆了！
 
@@ -121,7 +123,7 @@ the am I
 
 检验一下，点击运行：
 
-![Image](https://pic1.zhimg.com/80/v2-6a09445036e9c657e05c9ce56d9aaa2c_hd.jpg)
+![Image](../images/datastructure-stackqueue/11.jpg)
 
 符合预期。
 
@@ -134,7 +136,7 @@ the am I
 3. 查看表头的元素。（peek）
 4. 查看所有元素（用于检验)。（printAll)
 
-![Image](https://pic4.zhimg.com/80/v2-f850fca5e09f68610e71bb0a82e0066b_hd.jpg)
+![Image](../images/datastructure-stackqueue/12.jpg)
 
 相关内容不再重复，只说一点，就是我们的Queue要同时保有表头和表尾的数据，或者更准确点，指针，这样不管是往表尾添加元素还是删除表头都变得很容易，时间复杂度也都是O(1) 。
 
@@ -142,13 +144,13 @@ the am I
 
 end 就可以了，和我们在表头插入很像。
 
-![Image](https://pic3.zhimg.com/80/v2-ac139d1372691f56228fd55b0dd6a382_hd.jpg)
+![Image](../images/datastructure-stackqueue/13.jpg)
 
 自行理解。
 
 剩下的内容和Stack一样，不再重复，接下来做检验：
 
-![Image](https://pic4.zhimg.com/80/v2-050989957a579f2cdad5b54ddc5c8d6b_hd.jpg)
+![Image](../images/datastructure-stackqueue/14.jpg)
 
 想象一下排队的过程：
 
@@ -170,7 +172,7 @@ am the best
 
 检验：
 
-![Image](https://pic4.zhimg.com/80/v2-a3c8cb2d8879b3ad7e312aaf68f2cb8b_hd.jpg)
+![Image](../images/datastructure-stackqueue/15.jpg)
 
 符合预期。
 

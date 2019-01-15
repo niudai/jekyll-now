@@ -1,9 +1,8 @@
 ---
-layout: index
+layout: page
 title: 酸球发电机
+categories: [scifi]
 ---
-
-## 一
 
  小岛西边的那艘巨大航天飞船已经被拆得分崩离析了。
 
