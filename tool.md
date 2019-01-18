@@ -10,5 +10,5 @@ pemalink: /tool/
         {{ post.excerpt }}
       </div>
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-      {% endfor %}
+  {% endfor %}
 </div>
