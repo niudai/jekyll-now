@@ -90,8 +90,8 @@ Spring by Example
      我们不再需要创造任何实例，Factory帮助我们完成这一切。】
    </p>
    <p>
-    对于这种依赖注入为导向的框架，比如Spring，组件是面向接口进行编程的，就像之前在DIP例子中所说的那样。
-    但是现在IoC容器帮我们管理这一切，实例的创造，管理，类型转换等等，所以开发者就不再需要做些工作。
+    对于这种依赖注入为导向的框架，比如Spring，组件之间是通过接口进行交流，就像之前在DIP例子中所说的那样。
+    现在IoC容器帮我们管理这一切，实例的创造，管理，类型转换等等，开发者就不再需要做这些工作。
     IoC容器真正意义上帮助我们实现了依赖反转，完全满足了DIP准则。
    </p>
    <p>
@@ -126,8 +126,7 @@ Spring by Example
          Constructor 注入
         </td>
         <td style="border-bottom: 0.5pt solid ; ">
-         构造函数（constructor）的变量在实例化的时候注入
-         The constructor arguments are injected during instance instantiation.
+         构造函数（constructor）的参数在实例化的时候被注入。
         </td>
        </tr>
        <tr>
@@ -143,8 +142,7 @@ Spring by Example
          Interface 注入
         </td>
         <td style="">
-         该方法目前没有被Spring使用，但是在Avalon框架中出现。这种不同的依赖注入类型将对象映射或是注入
-         到指定的interface中。
+         该方法目前没有被Spring使用，但是在Avalon框架中出现过。这种不同的依赖注入类型将对象映射或是注入到指定的interface中。
         </td>
        </tr>
       </tbody>
@@ -163,8 +161,7 @@ Spring by Example
     <code class="code">
      BeanFactory
     </code>
-    管理这些你配置的JavaBeans。在下一节我们会讨论IoC容器及它是怎样利用依赖注入模式让你的代码
-    避免成为垃圾代码，提升你的代码质量的。
+    管理这些你配置的JavaBeans。在下一节我们会讨论IoC容器及它是怎样利用依赖注入模式让你的代码避免成为垃圾代码，提升你的代码质量的。
    </p>
    <div class="footnotes">
     <br/>

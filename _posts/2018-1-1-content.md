@@ -164,22 +164,22 @@ Spring by Example
          </dd>
          <dt>
           <span class="sect1">
-           <a href="core-concepts-dependency-injection-to-the-rescue.html">
-            1. Dependency Injection To The Rescue
+           <a href="{{site.baseurl}}/core-concepts-dependency-injection-to-the-rescue">
+            1. 依赖注入
            </a>
           </span>
          </dt>
          <dt>
           <span class="sect1">
-           <a href="core-concepts-bean-management-through-ioc.html">
-            1. Bean management through IoC
+           <a href="{{site.baseurl}}/core-concepts-bean-management-through-ioc">
+            1. IoC对bean的管理
            </a>
           </span>
          </dt>
          <dt>
           <span class="sect1">
-           <a href="core-concepts-our-example-in-spring-ioc.html">
-            1. Our Example In Spring IoC
+           <a href="{{site.baseurl}}/core-concepts-our-example-in-spring-ioc">
+            1. IoC实例展示
            </a>
           </span>
          </dt>
@@ -187,8 +187,8 @@ Spring by Example
        </dd>
        <dt>
         <span class="article">
-         <a href="intro-to-ioc.html">
-          A Practical Introduction to Inversion of Control
+         <a href="{{site.baseurl}}/intro-to-ioc">
+          控制反转实例展示
          </a>
         </span>
        </dt>
@@ -196,36 +196,36 @@ Spring by Example
         <dl>
          <dt>
           <span class="sect1">
-           <a href="intro-to-ioc.html#intro-to-ioc-basic-bean-creation">
-            1. Basic Bean Creation
+           <a href="{{site.baseurl}}/intro-to-ioc/#intro-to-ioc-basic-bean-creation">
+            1. Bean的创建
            </a>
           </span>
          </dt>
          <dt>
           <span class="sect1">
-           <a href="intro-to-ioc-basic-constructor-injection.html">
-            1. Basic Constructor Injection
+           <a href="{{site.baseurl}}/intro-to-ioc-basic-constructor-injection">
+            1. Constructor 注入
            </a>
           </span>
          </dt>
          <dt>
           <span class="sect1">
-           <a href="intro-to-ioc-basic-setter-injection.html">
-            1. Basic Setter Injection
+           <a href="{{site.baseurl}}/intro-to-ioc-basic-setter-injection">
+            1. Setter 注入
            </a>
           </span>
          </dt>
          <dt>
           <span class="sect1">
-           <a href="intro-to-ioc-reference-injection.html">
-            1. Reference Injection
+           <a href="{{site.baseurl}}/intro-to-ioc-reference-injection">
+            1. Reference 注入
            </a>
           </span>
          </dt>
          <dt>
           <span class="sect1">
-           <a href="intro-to-ioc-creating-a-spring-application.html">
-            1. Creating a Spring Application
+           <a href="{{site.baseurl}}/intro-to-ioc-creating-a-spring-application">
+            1. 创建一个Spring应用
            </a>
           </span>
          </dt>

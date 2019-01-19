@@ -67,7 +67,7 @@ Spring by Example
     所以我们如何在IoC容器中配置我们的之前的投票箱程序呢？
    </p>
    <p>
-    我们的代码保持原样，无需改变。我们需要做的只是在xml格式的配置文件中告知Spring
+    我们的代码保持原样，无需改变。我们需要做的只是在xml格式的配置文件中告知Spring：
     <span class="emphasis">
      <em>
       recorder
@@ -96,13 +96,12 @@ Spring by Example
       recorder
      </em>
     </span>
-    映射到
+    注入到
     <code class="code">
      VotingBooth
     </code>
     中。<br>
-    【译者云：在配置文件中声明了property之后，spring框架会通过你votingBooth中的setter方法，
-    创造一个voteRecorder实例，然后把这个recorder注入到votingBooth中。
+    【译者云：在配置文件中声明了property之后，spring框架会创造一个voteRecorder实例，将其作为votingBooth中setter方法的参数注入到votingBooth内部。
    </p>
    <p>
    </p>
@@ -120,8 +119,7 @@ Spring by Example
     神奇的Spring框架会为你处理类的实例化，所以你的应用代码无需在意任何类的实例化。现在在配置文件和Spring框架的帮助下，通过
     依赖注入，我们最终成功地，彻底地去除了高层模块对底层模块的内部依赖，完全实现了代码之间的解耦，实现了真正的依赖反转！
     【译者云：为什么叫做“反转”呢？在引入依赖注入思想前，我们的代码的高层模块内部包含有低层模块，也就是说我们高层模块从内部
-    依赖于低层模块，然而现在高层模块的内部并没有任何关于低层模块的实现和实例化，销毁，反而是低层模块需要根据配置文件决定它要
-    被注入到哪里，也就是所谓的“依赖反转”】。
+    依赖于低层模块，然而现在高层模块的内部并没有任何关于低层模块的实现和实例化，销毁，反而是低层模块需要根据配置文件决定它要被注入到哪里，也就是所谓的“依赖反转”】。
    </p>
   </div>
   <div class="copyright">
