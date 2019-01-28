@@ -6,21 +6,21 @@ categories: [data]
 
 仔细想想，在日常生活中，你见过这样的情景吗？
 
-![Image](images/../../images/DataStructure_3/1.jpg)
+![Image](../images/datastructure-unionfind/1.jpg)
 
-![Image](images/../../images/DataStructure_3/2.jpg)
+![Image](../images/datastructure-unionfind/2.jpg)
 
 当外面正在下雨的时候，坐在汽车里的你一定见过粘在车门玻璃上的水滴，它们会由于重力的原因而向下移动，在不断的移动过程中，有的水滴会和其他水滴相碰，然后凝聚成一个水滴；在社会中，你一定见过公司或部门的合并，每个公司的职员都属于自己的集体，如果两个公司合并，那么原先属于不同公司的职员，现在就属于一个集体内了；
 
 再看个例子：
 
-![Image](images/../../images/DataStructure_3/3.jpg)
+![Image](../images/datastructure-unionfind/3.jpg)
 
 把它想象成一块有空洞的石头，黑色的地方表示实心，白色的地方表示空心，如果你要判断从石头上方流入的水是否能从底部渗出，你需要做什么？
 
 这个问题和迷宫问题很想，我们发现那些相邻的空洞可以组成一个更大的空洞，是不是和水滴合并很像？相邻的自动合并为一个集合？我们将所有相邻的空洞都合并成一个集合，对于上图来讲，应该最后有三个集合：
 
-![Image](images/../../images/DataStructure_3/4.jpg)
+![Image](../images/datastructure-unionfind/4.jpg)
 
 三个区域分别涂上了颜色，也就是说，只要至少存在一个集合，最高的地方是第一行，最低的地方是底下那行，那么，这块石头就能渗水。
 
@@ -36,7 +36,7 @@ categories: [data]
 
 ## 归类式：
 
-![Image](images/../../images/DataStructure_3/5.jpg)
+![Image](../images/datastructure-unionfind/5.jpg)
 
 先前这些彩色块是混在一起的，我们为了让他们属于自己的集合，进行了严格的区分，比如，我规定左边的粉色区域是集合一，右边的绿色区域是集合2等。
 
@@ -60,7 +60,7 @@ id[2] = 1;//元素‘2’属于集合‘1’：{1，2，7}。
 
 ## 连线式：
 
-![Image](images/../../images/DataStructure_3/6.jpg)
+![Image](../images/datastructure-unionfind/6.jpg)
 
 就像这样，每个标号代表一个人，被两条线连起来的人就属于一个集体了，那么仔细看会发现有三个集合：
 
@@ -70,7 +70,7 @@ id[2] = 1;//元素‘2’属于集合‘1’：{1，2，7}。
 
 也就是每个人除了储存自身的值，还要储存他/她所指向的那个人，类似于链表，假如张三指向了李四，那么就可以顺着张三找到李四，所以这种方法真实的结构是这样子：
 
-![Image](images/../../images/DataStructure_3/7.jpg)
+![Image](../images/datastructure-unionfind/7.jpg)
 
 我们看到，2，4，3，9是属于一个集合，但是怎样才能判断2和3是属于同一个集合呢？原则上你必须顺着关系链条一直往上走，直到走到最顶部，也就是**根（root）为止**！
 
@@ -90,7 +90,7 @@ id[2] = 1;//元素‘2’属于集合‘1’：{1，2，7}。
 
 好，我们现在尝试用Java去实现Union Find，先从分类式走起。
 
-![Image](images/../../images/DataStructure_3/8.jpg)
+![Image](../images/datastructure-unionfind/8.jpg)
 
 因为分类式是快速寻找，所以我们起名为：QuickFindUF（UF指代UnionFind）。
 
@@ -123,7 +123,7 @@ id[2] = 1;//元素‘2’属于集合‘1’：{1，2，7}。
 
 好，简单的检验一下：
 
-![Image](images/../../images/DataStructure_3/9.jpg)
+![Image](../images/datastructure-unionfind/9.jpg)
 
 期待输出结果：
 
@@ -133,13 +133,13 @@ Not Connected
 
 输出：
 
-![Image](images/../../images/DataStructure_3/10.jpg)
+![Image](../images/datastructure-unionfind/10.jpg)
 
 符合预期。
 
 好，下一个：
 
-![Image](images/../../images/DataStructure_3/11.jpg)
+![Image](../images/datastructure-unionfind/11.jpg)
 
 起名为QuickUnion，表示合并迅速，由于每个元素的id都储存着它指向的那个元素，所以在初始化的时候，我们让每个元素都等于它自己，这与上一个方法的代码一样，但含义不同。
 
@@ -151,16 +151,16 @@ Not Connected
 
 好，做个实验：
 
-![Image](images/../../images/DataStructure_3/12.jpg)
+![Image](../images/datastructure-unionfind/12.jpg)
 
 输出：
 
-![Image](images/../../images/DataStructure_3/13.jpg)
+![Image](../images/datastructure-unionfind/13.jpg)
 
 OK。
 
 两方法在时间耗费上做一个比较：
-![Image](images/../../images/DataStructure_3/14.jpg)
+![Image](../images/datastructure-unionfind/14.jpg)
 
 要注意，这里面的N是按最坏的情况算的，所以虽然连线法的合并也是N，但是在大多数情况下，会比N小很多.
 
